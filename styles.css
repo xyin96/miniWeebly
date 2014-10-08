@@ -1,0 +1,239 @@
+
+@font-face{
+	font-family: miniWeeblyFont;
+	src: url(assets/Font/ProximaNova-Reg.otf)
+}
+
+@font-face{
+	font-family: miniWeeblyFontBold;
+	src: url(assets/Font/VAGRoundedStd-Bold.otf)
+}
+
+body{
+	margin:0px;
+    overflow: hidden;
+}
+
+#tempDemo{
+    border-radius: 5px;
+    border: 2px #AEB5FC solid;
+}
+
+[contenteditable].preview-content-title, [contenteditable].toolbar-page-list-add-title {
+    white-space: nowrap;
+    overflow: hidden;
+    display:table-cell;
+    font-size: 36px;
+} 
+[contenteditable].preview-content-title br, [contenteditable].toolbar-page-list-add-title br {
+        display:none;
+
+}
+[contenteditable].preview-content-title *, [contenteditable].toolbar-page-list-add-title * {
+        display:inline;
+        white-space:nowrap;
+}
+.preview-content-text, .preview-content-img, .preview-content-title{
+    font-family:sans-serif;
+	text-align:left;
+	padding:15px;
+    border: 1px #FFFFFF solid;
+    border-radius: 5px;
+}
+.preview-content-text{
+    height:auto;
+    background-image: none;
+}
+.preview-content-img{
+    height:300px;
+    background: none;
+}
+.preview-content-nav{
+    background: none;
+}
+.preview-content-text:hover, .preview-content-container:hover, .preview-content-img:hover, .preview-content-title:hover{
+    border: 1px #000000 solid;
+}
+.preview-content-text:hover, .preview-content-img:hover, .preview-content-title:hover, .preview-content-nav:hover{
+    background: url('/assets/Sprites/delete_element_icon.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.preview-content-container{
+    font-family:miniWeeblyFontBold;
+    align-content: center;
+	padding:10px;
+    height:auto;
+    border: 1px #FFFFFF solid;
+    background: none;
+}
+.preview-content-nav-item{
+	width:180px;
+	height:35px;
+	border-radius:5px;
+	background:#5676F3;
+	margin:5px;
+	overflow:hidden;
+	box-shadow:#535353;
+    display: table-cell;
+}
+.preview-content-nav-item:hover{
+	width:180px;
+	height:35px;
+	border-radius:5px;
+	background:#3656C3;
+	margin:5px;
+    display: table-cell;
+	overflow:hidden;
+}
+
+.header-wrap {
+	position: fixed;
+	width:100%;
+	top:0px;
+	left:0px;
+	margin:0px;
+	height:40px !important;
+	background:#518DCA;
+	box-shadow:#535353;
+    z-index: 5;
+}
+.header-filler{
+	width:1px;
+	top:0px;
+	left:0px;
+	height:40px !important;
+}
+.logo{
+	margin-left:25px;
+}
+
+.content-wrap {
+	top:0px;
+	left:0px;
+	margin:0px;
+	padding:0px;
+	height:100%;
+	width:100%;
+}
+.toolbar-wrap {
+	width:240px;
+	float:left;
+	background:#2C3E50;
+	height:100%;
+	border-right:1px solid #000000;
+    overflow: visible;
+    position:fixed;
+    z-index: 0;
+}
+.preview-wrap {
+	background:#FFFFFF;
+	height:100%;
+    padding-left: 50px;
+	float:left;
+}
+
+.toolbar-content{
+	font-family: miniWeeblyFont;
+	color:#FFFFFF;
+    position: static;
+    overflow: visible;
+}
+.toolbar-content-accordian{
+}
+.toolbar-content-accordian-panel{
+	border-top:1px solid #000000;
+	border-bottom:1px solid #000000
+}
+.toolbar-content-accordian-panel-header{
+	font-family:miniWeeblyFontBold;
+	text-align:center;
+	background:#5C6E80;
+	padding:5px;
+}
+.toolbar-content-accordian-panel-body{
+}
+
+.toolbar-page-list{
+	margin:10px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.toolbar-page-list-item{
+	width:180px;
+	height:35px;
+	border-radius:5px;
+	background:#5676F3;
+	margin:5px;
+	padding-right:5px;
+	overflow:hidden;
+	box-shadow:#535353;
+}
+.toolbar-page-list-item:hover{
+	width:180px;
+	height:35px;
+	border-radius:5px;
+	background:#3656C3;
+	margin:5px;
+	padding-right:5px;
+	overflow:hidden;
+}
+.toolbar-page-list-item-icon{
+	float:right;
+	margin-top:10px;
+	margin-left:5px;
+	margin-right:5px;
+	width:20px;
+}
+.toolbar-page-list-item-title{
+	margin:10px;
+}
+
+.toolbar-page-list-add{
+	width:180px;
+    height:35px;
+	border-radius:5px;
+	background:#1636B3;
+	margin:5px;
+	padding-right:5px;
+	overflow:hidden;
+	box-shadow:#535353;
+}
+.toolbar-page-list-add:hover{
+	width:180px;
+	border-radius:5px;
+	background:#3656C3;
+	padding-right:5px;
+}
+.toolbar-page-list-add-icon{
+	float:right;
+	margin-top:10px;
+	margin-left:5px;
+	margin-right:5px;
+	width:20px;
+}
+.toolbar-page-list-add-title{
+    margin:10;
+}
+
+.toolbar-elements-item{
+	width:90px;
+	height:90px;
+	padding:7px;
+    z-index:2;
+    cursor: move;
+}
+.toolbar-elements-item:hover{
+	width:90px;
+	height:90px;
+	padding:7px;
+}
+.preview-content{
+    padding: 50px;
+    margin-left: 240px;
+    width:calc(100% - 340px);
+    height:calc(100% - 140px);
+    position: static;
+    overflow-y: scroll;
+    z-index: -1;
+}

@@ -1,0 +1,8 @@
+<?php
+    $con = mysqli_connect("localhost","root","blargHblargh1");
+    mysqli_query($con, "USE miniWeebly");
+    $result = mysqli_query($con, "SELECT * FROM auth WHERE api_token = '" . $api_token . "'");
+    $row = mysqli_fetch_array($result);
+    echo 'Hi! To get started, add or click on a page on the left panel.';
+    echo '\n' . 'Your api token is: ' . $row['api_token'];
+?>

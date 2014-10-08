@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /api/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([A-Za-z0-9-]+)/page/([0-9-]+)?$ /api/page/?api_token=$1&id=$2
+RewriteRule ^([A-Za-z0-9-]+)/page/([0-9-]+)/([A-Za-z0-9-]+)?$ /api/page/?api_token=$1&id=$2&target=$3
+RewriteRule ^([A-Za-z0-9-]+)/pages/?$ /api/pages/?api_token=$1
